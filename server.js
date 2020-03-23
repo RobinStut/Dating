@@ -4,8 +4,10 @@ const app = express();
 const path = require("path");
 const exphbs = require("express-handlebars");
 const authRoutes = require("./routes/auth");
+const session = require("express-session");
 require("dotenv").config();
 require("./db");
+
 app.engine(
   "handlebars",
   exphbs({
@@ -13,7 +15,14 @@ app.engine(
     layoutsDir: path.join(__dirname, "views/layout"),
   })
 );
-
+app.use(
+  session({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: true },
+  })
+);
 app.use(
   bodyParser.urlencoded({
     extended: true,
