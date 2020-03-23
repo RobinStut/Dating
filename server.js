@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 const app = express();
 const path = require("path");
 const exphbs = require("express-handlebars");
+const authRoutes = require("./routes/auth");
 
 app.engine(
   "handlebars",
@@ -11,6 +12,8 @@ app.engine(
     layoutsDir: path.join(__dirname, "views/layout"),
   })
 );
+
+app.use(authRoutes);
 
 app.set("view engine", "handlebars");
 
