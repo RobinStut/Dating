@@ -4,6 +4,7 @@ const app = express();
 const path = require("path");
 const exphbs = require("express-handlebars");
 const authRoutes = require("./routes/auth");
+require("dotenv").config();
 
 app.engine(
   "handlebars",

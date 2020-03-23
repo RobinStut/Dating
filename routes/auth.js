@@ -6,6 +6,9 @@ router
   .get("/login", (req, res) => {
     res.render("pages/login");
   })
+  .post("/login", (req, res) => {
+    res.render("pages/login");
+  })
   .get("/signup", (req, res) => {
     res.render("pages/signup");
   });
