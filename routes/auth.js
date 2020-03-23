@@ -14,15 +14,14 @@ router
     res.render("pages/signup");
   })
   .post("/signup", (req, res) => {
-    console.log(req.body);
-    //   const {
-    //     email,
-    //     password,
-    //     age,
-    //     name,
-    //     gender
-    //   } = req.body
-    //   console.log(email,password,age,name,gender)
+    const { email, password, age, name, gender } = req.body;
+    const user = new User({
+      email,
+      password,
+      age,
+      name,
+      gender,
+    });
     res.send("signup post");
   });
 
