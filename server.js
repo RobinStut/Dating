@@ -5,7 +5,7 @@ const path = require("path");
 const exphbs = require("express-handlebars");
 const authRoutes = require("./routes/auth");
 require("dotenv").config();
-
+require("./db");
 app.engine(
   "handlebars",
   exphbs({

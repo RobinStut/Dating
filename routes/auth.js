@@ -13,7 +13,7 @@ router
   .get("/signup", (req, res) => {
     res.render("pages/signup");
   })
-  .post("/signup", (req, res) => {
+  .post("/signup", async (req, res) => {
     const { email, password, age, name, gender } = req.body;
     const user = new User({
       email,
@@ -22,7 +22,14 @@ router
       name,
       gender,
     });
-    res.send("signup post");
+    try {
+      await user.save();
+      const token = await user.generateAuthToken();
+      res.send(user);
+    } catch (e) {
+      console.log(e);
+      res.redirect("/signup");
+    }
   });
 
 module.exports = router;
