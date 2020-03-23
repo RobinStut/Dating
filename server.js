@@ -14,8 +14,13 @@ app.engine(
   })
 );
 
-app.use(authRoutes);
+app.use(
+  bodyParser.urlencoded({
+    extended: true,
+  })
+);
 app.use(bodyParser.json({ limit: "50mb" }));
+app.use(authRoutes);
 app.set("view engine", "handlebars");
 
 app.get("/", (req, res) =>
