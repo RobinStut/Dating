@@ -3,6 +3,9 @@ const bodyParser = require('body-parser')
 const app = express()
 const path = require('path')
 
+
+
+
 app.use(bodyParser.json()) // support json encoded bodies
 app.use(bodyParser.urlencoded({ extended: true })) // support encoded bodies
 app.use(express.static(path.join(__dirname, './static')))
