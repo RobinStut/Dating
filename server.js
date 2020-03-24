@@ -104,4 +104,32 @@ app.use(function (req, res) {
   res.status(404).render("pages/404");
 });
 
+// Routing index
+app.get("/", (req, res) => {
+  res.render("index", {
+    title: "Seek matches",
+  });
+});
+
+// Routing profile
+app.get("/profile", (req, res) => {
+  res.render("profile", {
+    title: "Profile settings",
+  });
+});
+
+// Routing view playlist user {
+app.get("/view-playlist", (req, res) => {
+  res.render("view-playlist", {
+    title: "Playlist",
+  });
+});
+
+// Routing songs
+app.get("/songs", function (req, res) {
+  res.render("songs", {
+    title: "Add songs to your playlist",
+  });
+});
+
 app.listen(3000);
