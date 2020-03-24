@@ -40,9 +40,10 @@
     "express-session": "^1.17.0",
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.5.4",
-    "mongoose": "^5.9.5",
     "path": "^0.12.7",
     "validator": "^13.0.0"
+    "mongoose": "^5.9.6",
+    "path": "^0.12.7"
   },
   "devDependencies": {
     "nodemon": "^1.19.4",
