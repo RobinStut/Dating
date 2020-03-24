@@ -92,7 +92,34 @@ app.use(
 
 app.use(bodyParser.json());
 
+// Posting music data to MongoDB
+app.post("/songs", (req, res) => {
+  const new_PlayList = new PlayList({
+    song: req.body.songName,
+    artist: req.body.artistName,
+  });
+  new_PlayList.save((error) => {
+    if (error) {
+      console.log("There was an error");
+    } else {
+      console.log("Songs have been successfully added");
+    }
+    res.render("songs-added");
+  });
+});
+
 // Routing
+
+// Get playlist data from DB and render it to HBS
+app.get("/playlist", (req, res) => {
+  PlayList.find({}, function (err, playlists) {
+    if (err) return handleError(err);
+    res.render("playlist", {
+      playlists: playlists,
+      title: "Your playlist",
+    });
+  });
+});
 
 app.get("/", (req, res) =>
   res.render("pages/index", {
