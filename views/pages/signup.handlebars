@@ -1,26 +1,29 @@
 <form method="post" action="/signup">
-    <div class="field">
+    <fieldset>
+        <legend>Email</legend>
         <input type="email" name="email" placeholder="Your email">
-    </div>
-    <div class="field">
+    </fieldset>
+    <fieldset>
+        <legend>password</legend>
         <input type="password" name="password" placeholder="Password">
-    </div>
-    <div class="field">
         <input type="password" name="confirm_password" placeholder="Confirm password">
-    </div>
-    <div class="field">
+    </fieldset>
+    <fieldset>
+        <legend>Age</legend>
         <input type="number" name="age" value="18"  min="18">
-    </div>
-    <div class="field">
+    </fieldset>
+    <fieldset>
+        <legend>Name</legend>
         <input type="text" name="name" placeholder="Your full name">
-    </div>
-    <div class="field">
+    </fieldset>
+    <fieldset>
+        <legend>gender</legend>
         <input type="radio" id="male" name="gender" value="male">
         <label for="male">Male</label><br>
         <input type="radio" id="female" name="gender" value="female">
         <label for="female">Female</label><br>
         <input type="radio" id="other" name="gender" value="other">
         <label for="other">Other</label>
-    </div>
+    </fieldset>
     <button type="submit">Signup</button>
 </form>
