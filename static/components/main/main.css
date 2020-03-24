@@ -1,0 +1,427 @@
+/* Remove padding and margin */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Font Face */
+
+@import url(//db.onlinewebfonts.com/c/25a1e83fae9330ddaffeba43da2dd762?family=Intro+Inline);
+
+@font-face {
+    font-family: "Intro Inline";
+    src: url("//db.onlinewebfonts.com/t/25a1e83fae9330ddaffeba43da2dd762.eot");
+    src: url("//db.onlinewebfonts.com/t/25a1e83fae9330ddaffeba43da2dd762.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/25a1e83fae9330ddaffeba43da2dd762.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/25a1e83fae9330ddaffeba43da2dd762.woff") format("woff"), url("//db.onlinewebfonts.com/t/25a1e83fae9330ddaffeba43da2dd762.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/25a1e83fae9330ddaffeba43da2dd762.svg#Intro Inline") format("svg");
+}
+
+/* Body */
+
+body {
+    background-color: #F8F8F8;
+}
+
+/* Navigation */
+
+header {
+    background: #FFFFFF;
+    height: 80px;
+    box-shadow: 0 2px 5px -2px gray;
+}
+
+.navigation {
+    padding-top: 1.2rem;
+    padding-left: 1rem;
+}
+
+.navigation ul {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+}
+
+.profile a {
+    text-decoration: none;
+    color: silver;
+    font-size: 2.5rem;
+}
+
+.home {
+    margin-left: 3.45rem;
+}
+
+.home a {
+    text-decoration: none;
+    font-size: 29px;
+    color: #50AA49;
+    font-family: 'Intro Inline';
+}
+
+.home div {
+    margin-top: 9px;
+}
+
+/* Profile image */
+
+.card-image {
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+    height: 24rem;
+    margin: 1rem 1rem 0 1rem;
+    background-color: #FFFFFF;
+    border: 1px solid #EBEBEB;
+}
+
+.card-image img {
+    display: block;
+    height: 90%;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    border-radius: 5px;
+}
+
+/* Bio info */
+
+.card-bio {
+    width: 100%;
+    background-color: #FFFFFF;
+    height: 18.7rem;
+    text-align: center;
+    margin-top: 1rem;
+    padding-top: 1rem;
+}
+
+h1 {
+    font-family: -apple-system-headine, BlinkMacSystemFont, sans-serif;
+    font-weight: 300;
+    font-size: 21px;
+}
+
+h2 {
+    font-family: -apple-system-headine, BlinkMacSystemFont, sans-serif;
+    font-weight: 200;
+    font-size: 12px;
+    color: #797979;
+    margin-bottom: 1rem;
+}
+
+article {
+    text-align: center;
+    margin: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-family: -apple-system-headine, BlinkMacSystemFont, sans-serif;
+    font-weight: 200;
+    font-size: 16px;
+    color: #676767;
+}
+
+.playlist-button {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    width: 20rem;
+    height: 3rem;
+    border-radius: 25px;
+    background-color: #1DB954;
+    box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+.playlist-button a {
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+}
+
+/* Like and dislike navigation */
+
+footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding-bottom: 1rem;
+    width: 100%;
+    height: 4rem;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer button {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    border: solid 1px lightgray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgrey;
+}
+
+footer button:focus {
+    outline: none;
+    border: none;
+}
+
+.like-button {
+    font-size: 3rem;
+    color: white;
+    background-color: #4A933D;
+}
+
+.dislike-button {
+    font-size: 2rem;
+    color: white;
+    background-color: #E26B6B;
+}
+
+/* Playlist nav */
+
+.playlistNav {
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+.playlistNav ul {
+    list-style: none;
+    display: flex;
+}
+
+.playlistNav li:nth-child(1) {
+    align-self: center;
+}
+
+.playlistNav li:nth-child(2) {
+    margin-left: 1rem;
+    flex-grow: 2;
+    align-self: center;
+}
+
+.playlistNav a {
+    text-decoration: none;
+    color: black;
+    font-family: -apple-system-headine, BlinkMacSystemFont, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    padding-bottom: .3rem;
+}
+
+.playlistNav .current {
+    border-bottom: 2px solid #50AA49;
+}
+
+.playlistNav {
+    margin-right: 1rem;
+}
+
+.playlistNav button {
+    width: 3rem;
+    height: 2rem;
+    border-radius: 25px;
+    background-color: #1DB954;
+    color: white;
+    font-family: -apple-system-headine, BlinkMacSystemFont, sans-serif;
+    font-weight: 100;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+/* Playlist form styles */
+
+.form-card {
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+    height: 24rem;
+    margin: 1rem 1rem 0 1rem;
+    background-color: #FFFFFF;
+    border: 1px solid #EBEBEB;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-card input[type=text] {
+    width: 20rem;
+    height: 3rem;
+    background-color: white;
+    align-self: center;
+    margin-bottom: 1rem;
+    border-radius: 25px;
+    border: 1px solid #D1D1D1;
+    font-family: -apple-system-headine, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    text-align: center;
+}
+
+.form-card input[type=text]:focus {
+    outline: none;
+}
+
+label {
+    align-self: center;
+    padding-bottom: .5rem;
+    font-family: -apple-system-headine, BlinkMacSystemFont, sans-serif;
+    font-weight: 100;
+}
+
+.form-card input[type=submit] {
+    margin-top: 1rem;
+    width: 12rem;
+    height: 3rem;
+    font-family: 'Roboto';
+    border-radius: 25px;
+    background-color: #1DB954;
+    color: white;
+    font-weight: 300;
+    font-size: 14px;
+    box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.2);
+    align-self: center;
+}
+
+#add {
+    background-color: white;
+    font-size: 3rem;
+    color: #B9B9B9;
+}
+
+#add:focus {
+    outline: none;
+}
+
+.feedback {
+    text-align: center;
+    font-family: -apple-system-headine, BlinkMacSystemFont, sans-serif;
+    color: #50AA49;
+    font-size: 16px;
+}
+
+/* Table styles */
+
+table {
+    margin-top: 2rem;
+    width: 100%;
+    border-spacing: 0;
+    font-family: -apple-system-headine, BlinkMacSystemFont, sans-serif;
+    font-weight: 100;
+    font-size: 13px;
+}
+
+table th {
+    text-align: left;
+    border-bottom: 1px solid #D1D1D1;
+    padding-left: 1rem;
+    padding-bottom: .3rem;
+    color: #50AA49;
+    font-weight: 100;
+}
+
+table td {
+    border-bottom: 1px solid #D1D1D1;
+}
+
+table th:nth-child(2) {
+    padding-left: 5rem;
+}
+
+table td:nth-child(2) {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 5rem;
+}
+
+table td:first-child {
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+
+/* Playlist header */
+
+.playlist-header h1,
+h2 {
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.playlist-header h2 {
+    font-size: 19px;
+    color: #50AA49;
+    font-weight: 300;
+}
+
+.playlist-card {
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+    height: 24rem;
+    margin: 1rem 1rem 0 1rem;
+    background-color: #FFFFFF;
+    border: 1px solid #EBEBEB;
+    border-radius: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* Profile information */
+
+.stockphoto {
+    display: block;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    border: 1px solid #EBEBEB;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+.stock-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.profile-bio {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.profile-bio h2 {
+    padding-top: .3rem;
+}
+
+.profile-bio h1 {
+    margin-top: 2rem;
+}
+
+.settings-options {
+    width: 100%;
+    height: 10rem;
+}
+
+.settings-options ul {
+    margin-top: 3rem;
+    list-style: none;
+}
+
+.settings-options li:first-child {
+    border-top: 1px solid #D1D1D1;
+}
+
+.settings-options li {
+    width: 100%;
+    font-family: -apple-system-headine, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #D1D1D1;
+    padding-left: 1rem;
+    font-weight: 200;
+}
+
+.settings-options a {
+    text-decoration: none;
+    color: black;
+}

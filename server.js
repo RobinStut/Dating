@@ -58,6 +58,9 @@ async function listDatabases(client) {
   databasesList.databases.forEach((db) => console.log(` - ${db.name}`));
 }
 
+// Static folders
+app.use(express.static(path.join(__dirname, "/main")));
+
 // Handlebars setup
 
 app.engine(
@@ -69,6 +72,16 @@ app.engine(
 );
 
 app.set("view engine", "handlebars");
+
+// Body Parser setup
+
+app.use(
+  bodyParser.urlencoded({
+    extended: true,
+  })
+);
+
+app.use(bodyParser.json());
 
 // Routing
 
