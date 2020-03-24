@@ -1,0 +1,22 @@
+<body class='playlist'>
+    {{> header}}
+    <nav class="playlistNav">
+        <ul>
+            <li><a class='current' href='/playlist'>Playlist</a></li>
+            <li><a href='/songs'>Add songs</a></li>
+            <li><button>Edit</button></li>
+        </ul>
+    </nav>
+    <table>
+        <tr>
+            <th>Song</th>
+            <th>Artist</th>
+        </tr>
+        {{#each playlists}}
+        <tr>
+            <td>{{song}}</td>
+            <td>{{artist}}</td>
+        </tr>
+        {{/each}}
+    </table>
+</body>

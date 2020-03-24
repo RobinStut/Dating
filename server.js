@@ -104,7 +104,7 @@ app.post("/songs", (req, res) => {
     } else {
       console.log("Songs have been successfully added");
     }
-    res.render("songs-added");
+    res.render("pages/songs-added");
   });
 });
 
@@ -121,39 +121,33 @@ app.get("/playlist", (req, res) => {
   });
 });
 
-app.get("/", (req, res) =>
+// Routing index
+app.get("/", (req, res) => {
   res.render("pages/index", {
-    title: "Your title here",
-  })
-);
+    title: "Seek matches",
+  });
+});
 
 app.use(function (req, res) {
   res.status(404).render("pages/404");
 });
 
-// Routing index
-app.get("/", (req, res) => {
-  res.render("index", {
-    title: "Seek matches",
-  });
-});
-
 // Routing profile
-app.get("/profile", (req, res) => {
+app.get("pages/profile", (req, res) => {
   res.render("profile", {
     title: "Profile settings",
   });
 });
 
 // Routing view playlist user {
-app.get("/view-playlist", (req, res) => {
+app.get("pages/view-playlist", (req, res) => {
   res.render("view-playlist", {
     title: "Playlist",
   });
 });
 
 // Routing songs
-app.get("/songs", function (req, res) {
+app.get("pages/songs", function (req, res) {
   res.render("songs", {
     title: "Add songs to your playlist",
   });
