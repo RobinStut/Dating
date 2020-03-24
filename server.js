@@ -58,6 +58,15 @@ async function listDatabases(client) {
   databasesList.databases.forEach((db) => console.log(` - ${db.name}`));
 }
 
+// Mongoose Schema
+const Schema = new mongoose.Schema({
+  song: String,
+  artist: String,
+});
+
+// Model
+const PlayList = mongoose.model("PlayList", Schema);
+
 // Static folders
 app.use(express.static(path.join(__dirname, "/main")));
 
