@@ -68,7 +68,7 @@ const Schema = new mongoose.Schema({
 const PlayList = mongoose.model("PlayList", Schema);
 
 // Static folders
-app.use(express.static(path.join(__dirname, "/main")));
+app.use(express.static(path.join(__dirname, "/static")));
 
 // Handlebars setup
 
